@@ -16,10 +16,7 @@ def lambda_handler(event, context):
     path = event['path']
 
     # Process the request based on its method and path
-    if http_method == 'GET' and path == '/helloworld':
-        response_body = {'message': 'Hello, world!'}
-        status_code = 200
-    elif http_method == 'GET' and path == '/jobhunt':
+    if http_method == 'GET' and path == '/jobhunt':
         response_body = {'message': f'{days_between(2024, 9, 3)} days since I started unemployment'}
         status_code = 200
     else:
