@@ -14,8 +14,6 @@ def lambda_handler(event, context):
     # Extract information from the event object, which represents the incoming request
     http_method = event['httpMethod']
     path = event['path']
-    query_string_parameters = event.get('queryStringParameters', {})
-    request_body = event.get('body')
 
     # Process the request based on its method and path
     if http_method == 'GET' and path == '/helloworld':
